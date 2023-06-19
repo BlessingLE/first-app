@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component'; 
 //this is added the new housing component into the home component -nested components 
+import { Housinglocation } from '../housinglocation'; //This creates an instance of the houselocation nsterface and allows homeComponent to use it
 
 @Component({
   selector: 'app-home',
@@ -24,6 +25,18 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
   
 styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
 
+export class HomeComponent {
+  /*add housinglocation of type housing loctaion to 
+  ensure that the data matches the description of the interface.*/
+  housinglocation: Housinglocation = {
+    id:9999,
+    name: 'Test Home',
+    city: 'Test City',
+    state: 'ST',
+    photo: 'assets/example-house.jpg',
+    availableUnits: 99,
+    wifi: true,
+    laundry: false,
+  };  //initialising the variables or the interface with test data
 }
