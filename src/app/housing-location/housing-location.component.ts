@@ -15,3 +15,13 @@ import { CommonModule } from '@angular/common';
 export class HousingLocationComponent {
 
 }
+export interface HousingLocation {
+  id: number;
+  name: string;
+  city: string;
+  state: string;
+  photo: string;
+  availableUnits: number;
+  wifi: boolean;
+  laundry: boolean;
+}  //defining the variables of the interface for housing loctaion 
