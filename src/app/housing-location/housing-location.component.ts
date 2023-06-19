@@ -5,11 +5,11 @@ import { CommonModule } from '@angular/common';
 import { Housinglocation } from '../housinglocation';
 
 @Component({
-  selector: 'app-housing-location',
+  selector: 'app-housing-location', 
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>
+    <p> 
       housing-location works!
     </p>
   `,
@@ -17,7 +17,7 @@ import { Housinglocation } from '../housinglocation';
 })
 
 export class HousingLocationComponent {
-    @Input() housingLocation!:
+    @Input() housinglocation!:
   HousingLocation;
 } // '!' is called the non-null assertion operator which means the values passed cannot be null or undefined
 /*In the above housinglocationcomponentclass, a new property called input of type housingloation is added. 
