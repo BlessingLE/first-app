@@ -23,7 +23,7 @@ import { HousingLocation } from '../housing-location/housing-location.component'
 //The first section creates a search bar that filters by city and adds a button to search
 //The second section adds the housing location to the home template
 /*In the second part, [housingLocation]="housingLocation" is called property binding. It is 
-in the format [attribute] = "value". "value" is thr name of the property in the specific component. 
+in the format [property attribute used to create an instance of the actual property] = "propery attribute containing the actual data values". "value" is thr name of the property in the specific component. 
 property binding allows you to connet a variable to an input() in angular*/
 styleUrls: ['./home.component.css']
 })
