@@ -4,6 +4,7 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
 //this is added the new housing component into the home component -nested components  
 import { HousingLocation } from '../housing-location/housing-location.component'; //This creates an instance of the houselocation nsterface and allows homeComponent to use it
 import { HousingService } from '../housing.service'; //we have to import the service and then inject it in order to use it
+import { RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -34,6 +35,7 @@ property binding allows you to connet a variable to an input() in angular*/
 /*Now we replaced the second part with <app-housing-location *ngFor= let housinglocation of housingLocationList" [housinglocation]="housingLocation"></app-housing-location>
 This allows us to use the ngFor directive which performs thwe same functions as a for loop. Before we didnt need it because only had one housing location. But now we have multiple and will need to loop through 
 all of them.*/
+
 styleUrls: ['./home.component.css']
 })
 
