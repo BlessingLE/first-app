@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component'; 
 //this is added the new housing component into the home component -nested components  
-import { Housinglocation } from '../housinglocation'; //This creates an instance of the houselocation nsterface and allows homeComponent to use it
+import { HousingLocation } from '../housing-location/housing-location.component'; //This creates an instance of the houselocation nsterface and allows homeComponent to use it
 
 @Component({
   selector: 'app-home',
@@ -16,8 +16,8 @@ import { Housinglocation } from '../housinglocation'; //This creates an instance
     </form>
   </section>
 
-  <section class="results">
-    <app-housing-location [housinglocation]="housingLocation"></app-housing-location>
+  /*<section class="results">
+    <app-housing-location [housinglocation]="housing"></app-housing-location>
   </section>
 `, 
 //The first section creates a search bar that filters by city and adds a button to search
@@ -29,9 +29,9 @@ styleUrls: ['./home.component.css']
 })
 
 export class HomeComponent {
-  /*add housinglocation of type housing loctaion to 
+  /*add housinglocation of type housing location to 
   ensure that the data matches the description of the interface.*/
-  housingLocation: Housinglocation = {
+  housing: HousingLocation = {
     id:9999,
     name: 'Test Home',
     city: 'Test City',
