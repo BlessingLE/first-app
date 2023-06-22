@@ -9,9 +9,11 @@ import { Housinglocation } from '../housinglocation';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p> 
-      housing-location works!
-    </p>
+  <section class="listing">
+    <img class="listing-photo" [src]="housinglocation.photo" alt="Exterior photo of {{housinglocation.name}}">
+    <h2 class="listing-heading">{{ housinglocation.name }}</h2>
+    <p class="listing-location">{{ housinglocation.city}}, {{housinglocation.state }}</p>
+  </section>
   `,
   styleUrls: ['./housing-location.component.css']
 })
