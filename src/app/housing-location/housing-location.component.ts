@@ -14,7 +14,8 @@ import { Housinglocation } from '../housinglocation';
     <h2 class="listing-heading">{{ housinglocation.name }}</h2>
     <p class="listing-location">{{ housinglocation.city}}, {{housinglocation.state }}</p>
   </section>
-  `,
+  `, //this code dynmically adds values for the location city, state andname. The picture to be displayed is gotten from the 
+  //src attribute and if that specific picture is not found as specified by the value in "", then the alt text is displayed. 
   styleUrls: ['./housing-location.component.css']
 })
 
