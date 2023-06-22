@@ -17,8 +17,7 @@ import { Housinglocation } from '../housinglocation';
 })
 
 export class HousingLocationComponent {
-    @Input() housinglocation!:
-  HousingLocation;
+    @Input() housinglocation!:HousingLocation;
 } // '!' is called the non-null assertion operator which means the values passed cannot be null or undefined
 /*In the above housinglocationcomponentclass, a new property called input of type housingloation is added. 
 It calls the input() method which allows for the values of the interface to be changed. In order o alow for the input 
