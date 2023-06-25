@@ -9,7 +9,7 @@ import { RouterModule} from '@angular/router';
 @Component({
   selector: 'app-housing-location', 
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule], //if you donot included the rotermodule import in the array, you cannot use routerlink to create links for pages/directives. because it won't be defined in host element a.
   template: `
   <section class="listing">
     <img class="listing-photo" [src]="housinglocation.photo" alt="Exterior photo of {{housinglocation.name}}">
@@ -20,8 +20,8 @@ import { RouterModule} from '@angular/router';
 `,
    //this code dynmically adds values for the location city, state and name. The picture to be displayed is gotten from the 
   //src attribute and if that specific picture is not found as specified by the value in "", then the alt text is displayed. 
-  /*in the 2nd piece. the routerlink directive allows angular to create dynamic links in the application. It is in the format [static part, dynmic data]. The user has to navigate to the details page for a specific 
-housing location by licking the learn-more Button.*/
+  /*in the 2nd piece. the routerlink directive allows angular to create dynamic links in the application. It is in the format 
+  [static part, dynmic data]. The user has to navigate to the details page for a specific housing location by licking the learn-more Button.*/
   styleUrls: ['./housing-location.component.css']
 })
 
