@@ -59,8 +59,10 @@ export class DetailsComponent {
   //including 'FormControl' causes the object to shape the form data and provides a default vale. In this case the default alues are empty strings. 
 
   constructor() {
-    const housingLocationId = Number(this.route.snapshot.params['id']);
-    this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
+    const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
+    this.housingService.getHousingLocationById(housingLocationId).then(housingLocation => {
+      this.housingLocation = housingLocation;
+    });
   }
 
   /*submit application method will execute when submit application is clicked.

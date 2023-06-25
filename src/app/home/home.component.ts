@@ -60,10 +60,13 @@ export class HomeComponent {
 
   
   constructor() {
-    this.housingLocationList = this.housingService.getAllHousingLocations();
-    this.filteredLocationList = this.housingLocationList; //we're updatign the search box list with all the data in the service housinglocationlist
-  }  //the constructor is caled when the method runs. This stores all the locations in the service inside the housingLocationList array.
-    //we can do this by calling the getAllHouseServiceLocations function defined in the service. This is basically inhecting the service into this property variable
+    this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]) => {
+      this.housingLocationList = housingLocationList;
+      this.filteredLocationList = housingLocationList;
+    });
+  }  /*the constructor is called when the method runs. This gets the data stored in the json webserver via the getalllhousinglocations method and 
+    stores it in a newly declared variable called housingLocationList. This way the housingLocationList reference in all the other files are valid.*/
+    
 }
 
 
