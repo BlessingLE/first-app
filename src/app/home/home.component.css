@@ -1,11 +1,12 @@
 .results {
-    display: grid;
-    column-gap: 14px;
-    row-gap: 14px;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
-    margin-top: 50px;
-    justify-content: space-around;
-  } /*Formating the display of output to the user*/
+  display:-moz-inline-box;
+  column-gap: 20px;
+  row-gap: 20px;
+  grid-template-columns: repeat(50px, minmax(600px, 600px));
+  margin-top: 50px;
+  justify-content: space-evenly;
+  
+  } /*Formating the display of output to the user grid-template-rows: repeat(auto-fill, minmax(60px, 60px));*/
   
   input[type="text"] {
     border: solid 1px var(--primary-color);
@@ -24,7 +25,7 @@
     border-radius: 8px;
   } /*formats the button that will be displayed in the home component for searching*/
   
-  @media (min-width: 500px) and (max-width: 768px) {
+  @media (min-width: 500px) and (max-width: 400px) {
     .results {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -40,9 +41,12 @@
   }
 
   /* Adding the style format for the housing location*/ 
-  .listing {
+.listing {
   background: var(--accent-color);
-  border-radius: 30px;
+  border-radius: 1px solid ;
+  width: 20vh;
+  display: flex;
+  overflow: hidden;
   padding-bottom: 30px;
 }
 .listing-heading {
@@ -50,9 +54,9 @@
   padding: 10px 20px 0 20px;
 }
 .listing-photo {
-  height: 250px;
-  width: 100%;
-  object-fit: cover;
+  height: auto;
+  width: auto;
+  object-fit: fill;
   border-radius: 30px 30px 0 0;
 }
 .listing-location {
