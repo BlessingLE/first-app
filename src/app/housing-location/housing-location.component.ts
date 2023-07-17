@@ -42,4 +42,4 @@ export interface HousingLocation {
   availableUnits: number;
   wifi: boolean;
   laundry: boolean;
-}  //defining the variables of the interface for housing loctaion 
+}  //defining the variables of the interface for housing location 
